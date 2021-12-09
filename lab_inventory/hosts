@@ -8,5 +8,8 @@ node1 ansible_host=13.40.96.213
 node2 ansible_host=35.177.140.19
 node3 ansible_host=3.10.209.215
 
+[ftpserver]
+node2 ansible_host=35.177.140.19
+
 [control]
 ansible-1 ansible_host=18.130.175.95
