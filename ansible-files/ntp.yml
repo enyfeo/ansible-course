@@ -1,0 +1,9 @@
+---
+- name: Install ntp
+  hosts: node3
+  become: yes
+  tasks:
+  - name: latest ntp Installed
+    yum:
+      name: ntp
+      state: latest

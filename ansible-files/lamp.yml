@@ -1,0 +1,28 @@
+---
+- name: Apache server installed
+  hosts: node3
+  become: yes
+  tasks:
+  - name: latest Apache version installed
+    yum:
+      name: httpd
+      state: latest
+  - name: Apache enabled and running
+    service:
+      name: httpd
+      enabled: true
+      state: started
+
+- name: Mysql server installed
+  hosts: node3
+  become: yes
+  tasks:
+  - name: latest Mysql version installed
+    yum:
+      name: mysql-server
+      state: latest
+  - name: Mysql enabled and running
+    service:
+      name: mysqld
+      enabled: true
+      state: started

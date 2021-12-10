@@ -1,0 +1,15 @@
+---
+- hosts: node1
+  become: yes
+  tasks:
+   - name: install MariaDB server
+     yum:
+       name: "{{ packages }}"
+       state: latest
+     vars:
+        packages:
+            - httpd
+            - php
+            - mariadb
+
+

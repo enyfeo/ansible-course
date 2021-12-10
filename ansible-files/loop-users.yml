@@ -2,7 +2,7 @@
 - name: Ensure users
   hosts: node1
   become: true
-
+  no_log: true
   tasks:
     - name: Ensure three users are present
       user:

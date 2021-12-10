@@ -1,0 +1,15 @@
+---
+- name: Install Git
+  hosts: node3
+  become: yes
+  tasks:
+  - name: latest Git Installed
+    yum:
+      name: git
+      state: latest
+  - name: Check Git Version
+    shell: git --version
+    register: git_ver
+
+  - debug:
+      var: git_ver
